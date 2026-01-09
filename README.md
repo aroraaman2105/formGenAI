@@ -1,73 +1,136 @@
-# Welcome to your Lovable project
+# 🚀 FormGenAI — AI Powered Form Builder Platform
 
-## Project info
+FormGenAI is a full-stack web application that allows users to generate dynamic, customizable forms using natural language. Instead of manually designing forms, users describe their requirements in plain English and the AI generates a complete form schema instantly.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+The platform supports form sharing, response collection, analytics, authentication, and email notifications — making it a real-world, production-ready SaaS-style application.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🧠 What Problem Does FormGenAI Solve?
 
-**Use Lovable**
+Creating forms manually is:
+- Time-consuming
+- Repetitive
+- Error-prone
+- Requires technical knowledge
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+**FormGenAI solves this by:**
+- Letting users describe forms in natural language
+- Automatically generating structured form fields
+- Managing responses and analytics centrally
+- Providing secure access to form owners
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## ✨ Key Features
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 🤖 AI-Powered Form Generation
+- Generate forms using plain English prompts
+- AI converts prompt → structured JSON schema
+- Supported field types:
+  - Text
+  - Email
+  - Textarea
+  - Radio buttons
+  - Checkboxes
+  - Dropdown (Select)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+### 📄 Form Management
+- View all generated forms in **My Forms**
+- Edit form title, description, and fields
+- Delete forms (with automatic response cleanup)
+- Forms stored persistently in MongoDB
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 🌐 Public Form Sharing
+- Each form has a public shareable link
+- Anyone with the link can submit responses
+- No login required for form respondents
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### 📊 Responses & Analytics
+- All responses stored in database
+- View responses per form
+- Charts:
+  - Bar charts
+  - Pie charts
+- Export responses as CSV
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### 🔐 Authentication & Authorization
+- Single-owner authentication system
+- JWT-based authentication
+- Only the owner can:
+  - View responses
+  - Access analytics
+  - Edit or delete forms
+- Public users can only submit forms
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### 📧 Email Notifications
+- Owner receives email when:
+  - A new form is generated
+  - A user submits a response
+- Implemented using Nodemailer
+- Production-safe email handling
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+### 🌗 UI / UX
+- Light & Dark theme support
+- Responsive design
+- Clean, modern interface
+- Accessible components
+- Smooth navigation and feedback
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## 🛠️ Tech Stack
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+### Frontend (Focus Area)
+- **React**  
+  Component-based UI for modular, reusable interfaces
 
-## Can I connect a custom domain to my Lovable project?
+- **Vite**  
+  Lightning-fast development server and optimized production builds
 
-Yes, you can!
+- **TypeScript**  
+  Static typing for better scalability, maintainability, and bug prevention
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- **Tailwind CSS**  
+  Utility-first styling for rapid UI development
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- **shadcn/ui**  
+  Accessible, reusable UI components
+
+- **React Router**  
+  Client-side routing for SPA navigation
+
+---
+
+### Backend
+- **Node.js**
+- **Express.js**
+- **MongoDB + Mongoose**
+- **Groq AI API** (LLM-based form generation)
+- **JWT** for authentication
+- **bcrypt** for password hashing
+- **Nodemailer** for email notifications
+
+---
+
+### Deployment
+- **Frontend:** Vercel
+- **Backend:** Render / Railway
+- **Database:** MongoDB Atlas
+
+---
+
+
+
